@@ -1,0 +1,22 @@
+{
+  "name": "monitoring-stats-app",
+  "version": "1.0.0",
+  "description": "Ingesting data and API for querying",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/barthola/monitoring-stats-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/barthola/monitoring-stats-app/issues"
+  },
+  "homepage": "https://github.com/barthola/monitoring-stats-app#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
