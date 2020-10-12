@@ -1,4 +1,4 @@
-generateData = (mins) => {
+const generateData = (mins) => {
     let currentTime = Math.floor(Date.now() * 0.0001) *10;
     let data = [];
 
@@ -13,8 +13,8 @@ generateData = (mins) => {
     return data;
 }
 
-getRandomIntFromRange = (start, end) => {
+const getRandomIntFromRange = (start, end) => {
     return ~~(Math.random() * end) + start;
 }
 
-export { generateData };
+export default generateData

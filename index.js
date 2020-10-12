@@ -1,14 +1,12 @@
 import express from 'express'
-import { generateData } from './scripts/helper.js'
+import generateData from './scripts/helper.js'
 
 let app = express()
 
 let data = generateData(5)
 
 app.set("port", (process.env.PORT || 8080))
-app.use(bodyParser.json({
-    type: "application/json"
-}))
+app.use(express.json)
 
 app.get('/', (request, result) => {
     result.send('Hello World!\n'+JSON.parse(data))
@@ -16,11 +14,7 @@ app.get('/', (request, result) => {
 
 // Start the server
 app.listen(app.get('port'), () => {
-    require('dns').lookup(require('os').hostname(),
-        (err, addr) => {
-        console.log(
-            `App listening at http://${addr}:${process.env.PORT || 8080}\n` +
-            'Press Ctrl+C to quit.'
-        )
-    })
+    console.log(`App listening at http://localhost:${process.env.PORT}\n` +
+        'Press Ctrl+C to quit.')
+    console.log('data', JSON.stringify(data))
 })
