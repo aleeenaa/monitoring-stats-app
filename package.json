@@ -1,7 +1,7 @@
 {
   "name": "monitoring-stats-app",
   "version": "1.0.0",
-  "description": "Ingesting data and API for querying",
+  "description": "Script for ingesting data and API for querying",
   "main": "index.js",
   "type": "module",
   "scripts": {
@@ -19,10 +19,6 @@
   },
   "homepage": "https://github.com/barthola/monitoring-stats-app#readme",
   "dependencies": {
-    "babel": "^6.23.0",
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.3",
-    "babel-eslint": "^10.1.0",
     "eslint": "^7.11.0",
     "express": "^4.17.1"
   }
