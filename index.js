@@ -7,7 +7,7 @@ app.set("port", PORT)
 app.use(express.json())
 
 app.get('/search', (req, res) => {
-    const params = req.params
+    const params = req.query
     let result
     if (!validateInput(params)) {
         result = {

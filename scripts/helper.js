@@ -1,5 +1,5 @@
 export const generateData = (mins) => {
-    let currentTime = getSeconds(Date.now())
+    let currentTime = Math.floor(Date.now() * 0.0001)*10
     let data = []
 
     for (let i = 0; i < mins; i++) {
@@ -14,7 +14,7 @@ export const generateData = (mins) => {
 }
 
 export const getSeconds = (dt) => {
-    return  Math.floor(new Date(dt) * 0.0001) *10
+    return  Math.floor((new Date(parseInt(dt)).getTime()) * 0.001)
 }
 
 const getRandomIntFromRange = (start, end) => {
@@ -30,9 +30,7 @@ export const validateInput = (params) => {
 }
 
 export const queryData = (start, end, data) => {
-    data.sort()
-    data.filter(obj => {
-        return start <= obj.timestamp <= end
+    return data.filter(obj => {
+        return (start <= obj.timestamp) && (obj.timestamp <= end)
     })
-    return data
 }

@@ -6,10 +6,14 @@
 4. Run `npm run start` to start localhost at 8080
 
 ### Testing
-Postman can be used to test the API by sending requests to http://localhost:8080/search with the following parameters:
-```
-Specify date range to query data
 
-start   Valid start date/datetime
-end     Valid end date/datetime
+Postman can be used to test the API by sending requests to `http://localhost:8080/search` with the following parameters:
+
+```
+
+Specify date range in EPOCH time  format to query data
+
+start   Valid start EPOCH time
+end     Valid end EPOCH time
+
 ```
