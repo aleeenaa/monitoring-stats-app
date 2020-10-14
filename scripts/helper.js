@@ -17,12 +17,17 @@ export const getSeconds = (dt) => {
     return  Math.floor((new Date(parseInt(dt)).getTime()) * 0.001)
 }
 
+export const today = () => {
+    const today = new Date()
+    return new Date(today.getFullYear(), today.getMonth(), today.getDate()).getTime()
+}
+
 const getRandomIntFromRange = (start, end) => {
     return ~~(Math.random() * end) + start
 }
 
 export const validateInput = (params) => {
-    if (!params || !params.start || !params.end) {
+    if (!params || !params.day && !(params.start && params.end)) {
         return false
     }
     const start = new Date(params.start) != "undefined", end = new Date(params.end) != "undefined"
