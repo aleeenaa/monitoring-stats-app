@@ -27,7 +27,7 @@ const getRandomIntFromRange = (start, end) => {
 }
 
 export const validateInput = (params) => {
-    if (!params || !params.day && !(params.start && params.end)) {
+    if (!params || (!params.day && (!params.start || !params.end))) {
         return false
     }
     const start = new Date(params.start) != "undefined", end = new Date(params.end) != "undefined"
